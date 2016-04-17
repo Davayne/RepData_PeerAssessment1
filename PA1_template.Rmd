@@ -27,9 +27,8 @@ Show any code that is needed to
 
 ## Read Data and Process
 
-Set working Directory, read in data and convert variables to needed format.
+read in data and convert variables to needed format.
 ```{r echo=TRUE}
-setwd("C://Users//Devayne//Desktop//Data Specialization Course//Reproducible Research//Assignment 1")
 data <- read.csv("activity.csv", header= TRUE, sep = ",", na.strings = "NA") 
 data$date <- ymd(data$date)   ## transform the data variable to a date format
 ```
@@ -154,4 +153,5 @@ s <- ggplot(interval_data, aes(x=interval, y=steps, color = daytype)) +
      geom_line() + facet_wrap(~ daytype, ncol = 1, nrow=2) 
 print(s)
 ```
-On average people tend to take more steps on weekends than weekdays.
+
+On average people tend to take more steps on weekends than weekdays
